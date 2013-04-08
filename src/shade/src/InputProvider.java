@@ -106,7 +106,7 @@ public abstract class InputProvider {
 		return false;
 	}
 	
-	public boolean mousButtonPressed(int k) {
+	public boolean mouseButtonPressed(int k) {
 		for(int i : mousePressEvents())
 			if(i == k)
 				return true;
