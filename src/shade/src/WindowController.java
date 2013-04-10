@@ -29,14 +29,14 @@ public abstract class WindowController {
 		e.printStackTrace();
 	}
 
-	public boolean isRunning() {
-		return running;
-	}
-	
 	public InputProvider input() {
 		return window.getInput();
 	}
-	
+
+	public boolean isRunning() {
+		return running;
+	}
+
 	public void onCloseRequest() {
 		requestClose();
 	}
@@ -44,6 +44,8 @@ public abstract class WindowController {
 	public void preStartup() throws Exception {
 		window.open();
 	}
+
+	public abstract void render(int delta);
 
 	public void requestClose() {
 		running = false;
@@ -100,6 +102,5 @@ public abstract class WindowController {
 	}
 
 	public abstract void update(int delta);
-	public abstract void render(int delta);
-	
+
 }
